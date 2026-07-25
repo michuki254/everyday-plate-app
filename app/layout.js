@@ -22,6 +22,7 @@ const oswald = Oswald({
 export const metadata = {
   title:
     "The Everyday Plate Blueprint — The Practical 30-Day System For Sustainable Fat Loss",
+  authors: [{ name: "Maya Hartwell" }],
   description:
     "The complete 730+ page system: 24 chapters, 60 flexible recipes, a day-by-day 30-day program, and printable workbook tools for sustainable fat loss without extremes.",
   openGraph: {

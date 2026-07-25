@@ -332,6 +332,39 @@ img { max-width: 100%; height: auto; }
 }
 .postscript { border-top: 1px solid #d6dce5; padding-top: 24px !important; }
 
+.author-signoff em {
+  font-family: var(--body-font);
+  font-size: 15px;
+  font-style: italic;
+  color: #697586;
+  margin-top: 4px;
+}
+
+/* about the author */
+.about-author { margin: 0 auto 48px; max-width: 1100px; padding: 0 14px; text-align: center; }
+.about-author h2 {
+  background: #2c5490;
+  color: #fff;
+  font-family: var(--heading-font);
+  font-size: 42px;
+  font-weight: 700;
+  margin: 0;
+  padding: 20px 10px;
+}
+.about-card { border: 1px solid #aebacc; padding: 30px 40px; text-align: left; }
+.about-card p { font-size: 20px; line-height: 1.45; margin: 16px 0; }
+.about-card blockquote {
+  border-left: 4px solid var(--red);
+  color: #2e4263;
+  font-family: var(--heading-font);
+  font-size: 24px;
+  font-style: italic;
+  line-height: 1.35;
+  margin: 24px 0;
+  padding: 6px 0 6px 22px;
+}
+.about-card .about-note { color: #697586; font-size: 14px; line-height: 1.5; }
+
 /* footer */
 footer { background: #215795; color: #fff; padding: 45px 20px; text-align: center; }
 .footer-brand {
@@ -468,6 +501,10 @@ footer p { font-size: 12px; }
   .next-card p, .next-card li, .guarantee p { font-size: 17px; }
   .not-one { font-size: 30px !important; }
   .next-card h3, .guarantee h3 { font-size: 26px; }
+  .about-author h2 { font-size: 26px; }
+  .about-card { padding: 24px; }
+  .about-card p { font-size: 17px; }
+  .about-card blockquote { font-size: 19px; }
   .guarantee .limited { font-size: 22px; }
   .red-cta { font-size: 17px; }
   .inside-book .red-cta, .next-steps .red-cta, .guarantee .red-cta { font-size: 18px; }

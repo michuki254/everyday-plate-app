@@ -285,7 +285,8 @@ export default function Home() {
             days change how you eat for the next 30 years.
           </p>
           <div className="author-signoff">
-            <strong>[Author Name]</strong>
+            <strong>Maya Hartwell</strong>
+            <em>Practical nourishment for real life.</em>
           </div>
           <p className="postscript">
             <strong>P.S.</strong> If you&apos;re one of those people (like me)
@@ -307,13 +308,34 @@ export default function Home() {
         </BuyButton>
       </section>
 
+      <section className="about-author">
+        <h2>About The Author</h2>
+        <div className="about-card">
+          <p>
+            <strong>Maya Hartwell</strong> is a wellness writer and
+            everyday-habits educator focused on making healthy eating simpler,
+            more flexible, and easier to maintain. Her compassionate approach
+            helps readers build balanced meals, understand their appetite,
+            move with confidence, and create routines that work in real life.
+          </p>
+          <blockquote>
+            &ldquo;Healthy habits should be structured enough to guide you and
+            flexible enough to survive real life.&rdquo;
+          </blockquote>
+          <p className="about-note">
+            Maya Hartwell is a wellness-education pen name. The author does
+            not claim to be a physician, registered dietitian, psychologist,
+            or other licensed healthcare professional.
+          </p>
+        </div>
+      </section>
+
       <footer>
         <p className="footer-brand">
           <span className="brand-mark">EPB</span> The Everyday Plate Blueprint
         </p>
         <p>
-          © {new Date().getFullYear()} [Author Name / Publishing Brand]. All
-          rights reserved.
+          © {new Date().getFullYear()} Maya Hartwell. All rights reserved.
         </p>
         <nav className="legal-links" aria-label="Legal">
           <a href="#">Privacy Policy</a>
