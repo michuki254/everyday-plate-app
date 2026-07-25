@@ -8,7 +8,9 @@ import { useState } from "react";
   project's environment variables) to your Shopify product URL or a
   cart permalink (https://YOURSTORE.myshopify.com/cart/VARIANT_ID:1).
 */
-const CHECKOUT_URL = process.env.NEXT_PUBLIC_SHOPIFY_CHECKOUT_URL || "";
+const CHECKOUT_URL =
+  process.env.NEXT_PUBLIC_SHOPIFY_CHECKOUT_URL ||
+  "https://q2ztvn-ku.myshopify.com/products/the-everyday-plate-blueprint-complete-edition-pdf";
 
 export default function BuyButton({
   children = "YES! I Want The Everyday Plate Blueprint For $29!",
