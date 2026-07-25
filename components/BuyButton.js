@@ -10,7 +10,7 @@ import { useState } from "react";
 */
 const CHECKOUT_URL =
   process.env.NEXT_PUBLIC_SHOPIFY_CHECKOUT_URL ||
-  "https://q2ztvn-ku.myshopify.com/products/the-everyday-plate-blueprint-complete-edition-pdf";
+  "https://q2ztvn-ku.myshopify.com/cart/46901966340295:1";
 
 export default function BuyButton({
   children = "YES! I Want The Everyday Plate Blueprint For $29!",
