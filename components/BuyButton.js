@@ -4,39 +4,33 @@ import { useState } from "react";
 
 /*
   SHOPIFY CHECKOUT — connect before launch:
-  1. In Shopify admin, create the product (use the free "Digital Downloads"
-     app to attach the ebook PDF), then copy either:
-     • the product page URL:
-       https://YOURSTORE.myshopify.com/products/everyday-plate-blueprint
-     • or a cart permalink for one-click checkout:
-       https://YOURSTORE.myshopify.com/cart/VARIANT_ID:1
-  2. Set it as NEXT_PUBLIC_SHOPIFY_CHECKOUT_URL in .env.local (and in the
-     Vercel project's environment variables), then redeploy.
+  Set NEXT_PUBLIC_SHOPIFY_CHECKOUT_URL in .env.local (and in the Vercel
+  project's environment variables) to your Shopify product URL or a
+  cart permalink (https://YOURSTORE.myshopify.com/cart/VARIANT_ID:1).
 */
 const CHECKOUT_URL = process.env.NEXT_PUBLIC_SHOPIFY_CHECKOUT_URL || "";
 
-export default function BuyButton({ label = "Buy now" }) {
+export default function BuyButton({
+  children = "YES! I Want The Everyday Plate Blueprint For $29!",
+  subtitle = "Instant Download · 730+ Pages · 30-Day Money-Back Guarantee",
+}) {
   const [showNote, setShowNote] = useState(false);
 
-  if (CHECKOUT_URL) {
-    return (
-      <a className="btn" href={CHECKOUT_URL}>
-        {label}
-      </a>
-    );
-  }
+  const handleClick = (e) => {
+    if (!CHECKOUT_URL) {
+      e.preventDefault();
+      setShowNote(true);
+    }
+  };
 
   return (
     <>
-      <a
-        className="btn"
-        href="#"
-        onClick={(e) => {
-          e.preventDefault();
-          setShowNote(true);
-        }}
-      >
-        {label}
+      <a className="red-cta" href={CHECKOUT_URL || "#"} onClick={handleClick}>
+        <span className="cta-arrow">➜</span>
+        <span className="cta-copy">
+          {children}
+          {subtitle && <small>{subtitle}</small>}
+        </span>
       </a>
       {showNote && (
         <div className="checkout-note">

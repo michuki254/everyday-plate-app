@@ -1,27 +1,33 @@
-import { EB_Garamond, Inter } from "next/font/google";
+import { Roboto, Roboto_Slab, Oswald } from "next/font/google";
 import "./globals.css";
 
-const garamond = EB_Garamond({
+const roboto = Roboto({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-serif",
+  weight: ["400", "500", "700", "900"],
+  variable: "--font-roboto",
 });
 
-const inter = Inter({
+const robotoSlab = Roboto_Slab({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-sans",
+  weight: ["400", "700", "800"],
+  variable: "--font-roboto-slab",
+});
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  weight: ["500", "700"],
+  variable: "--font-oswald",
 });
 
 export const metadata = {
-  title: "The Everyday Plate Blueprint — A Practical 30-Day System for Sustainable Fat Loss",
+  title:
+    "The Everyday Plate Blueprint — The Practical 30-Day System For Sustainable Fat Loss",
   description:
-    "A 730-page practical system: 24 chapters, 60 recipes, a 30-day implementation program, and workbook tools for sustainable fat loss, better energy, and real-life eating without extremes.",
+    "The complete 730+ page system: 24 chapters, 60 flexible recipes, a day-by-day 30-day program, and printable workbook tools for sustainable fat loss without extremes.",
   openGraph: {
     title: "The Everyday Plate Blueprint",
     description:
-      "Build a system you can live with — not a plan you need to escape. 24 chapters • 60 recipes • 30-day program.",
+      "The practical 30-day system for sustainable fat loss, better energy, and real-life eating — without extremes.",
     images: ["/images/cover.jpg"],
     type: "website",
   },
@@ -29,7 +35,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${garamond.variable} ${inter.variable}`}>
+    <html
+      lang="en"
+      className={`${roboto.variable} ${robotoSlab.variable} ${oswald.variable}`}
+    >
       <body>{children}</body>
     </html>
   );
