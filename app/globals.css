@@ -47,12 +47,12 @@ img { max-width: 100%; height: auto; }
 .hero-section {
   background: radial-gradient(1200px 600px at 70% -10%, #24344d 0%, #10141a 60%), #10141a;
   color: #fff;
-  padding: 44px 20px 60px;
+  padding: 22px 20px 40px;
 }
 .hero-inner { margin: auto; max-width: 1100px; }
 .hero-question {
   font-family: var(--heading-font);
-  font-size: 24px;
+  font-size: clamp(15px, 1.6vw, 20px);
   font-style: italic;
   font-weight: 400;
   margin: 0 0 16px;
@@ -60,7 +60,7 @@ img { max-width: 100%; height: auto; }
 }
 .hero-section h1 {
   font-family: var(--heading-font);
-  font-size: 44px;
+  font-size: clamp(26px, 2.9vw, 38px);
   font-weight: 700;
   line-height: 1.3;
   margin: 0 auto;
@@ -69,9 +69,9 @@ img { max-width: 100%; height: auto; }
 }
 .hero-section h1 u { text-decoration-color: var(--red); }
 .hero-subtitle {
-  font-size: 21px;
+  font-size: clamp(15px, 1.5vw, 18px);
   line-height: 1.4;
-  margin: 14px auto 34px;
+  margin: 10px auto 24px;
   max-width: 760px;
   text-align: center;
   color: #d9dee7;
@@ -79,7 +79,7 @@ img { max-width: 100%; height: auto; }
 .hero-grid {
   align-items: center;
   display: grid;
-  gap: 44px;
+  gap: 36px;
   grid-template-columns: 1fr 1fr;
   max-width: 940px;
   margin: 0 auto;
@@ -89,7 +89,7 @@ img { max-width: 100%; height: auto; }
   box-shadow: 0 28px 60px rgba(0, 0, 0, 0.55);
   display: block;
   margin: 0 auto;
-  max-width: 400px;
+  max-width: min(300px, 24vw);
   width: 100%;
 }
 .hero-offer {
@@ -97,22 +97,22 @@ img { max-width: 100%; height: auto; }
   color: #fff;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 26px 24px;
+  gap: 13px;
+  padding: 20px 22px;
   position: relative;
 }
 .offer-title {
   background: var(--red);
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 700;
-  margin: -26px -24px 0;
-  padding: 12px 16px;
+  margin: -20px -22px 0;
+  padding: 10px 14px;
 }
 .offer-ticks { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
-.offer-ticks li { padding-left: 26px; position: relative; font-size: 15.5px; line-height: 1.4; }
+.offer-ticks li { padding-left: 24px; position: relative; font-size: 14px; line-height: 1.35; }
 .offer-ticks li::before { content: "✓"; position: absolute; left: 0; font-weight: 900; }
-.offer-price { font-family: var(--offer-font); font-size: 42px; font-weight: 700; line-height: 1; }
-.offer-price span { display: block; font-family: var(--body-font); font-size: 13px; font-weight: 500; margin-top: 6px; opacity: 0.9; }
+.offer-price { font-family: var(--offer-font); font-size: 34px; font-weight: 700; line-height: 1; }
+.offer-price span { display: block; font-family: var(--body-font); font-size: 12px; font-weight: 500; margin-top: 4px; opacity: 0.9; }
 
 /* red CTA */
 .red-cta {
@@ -148,6 +148,8 @@ img { max-width: 100%; height: auto; }
   padding: 12px 16px;
   text-align: center;
 }
+.hero-offer .red-cta { font-size: 17px; padding: 13px 18px; }
+.hero-offer .red-cta small { font-size: 11px; margin-top: 4px; }
 .hero-offer .checkout-note { background: rgba(255, 255, 255, 0.12); border-color: #fff; color: #fff; }
 
 /* dark intro */
@@ -448,11 +450,14 @@ footer p { font-size: 12px; }
 
 /* responsive */
 @media (max-width: 800px) {
-  .hero-section h1 { font-size: 32px; }
-  .hero-question { font-size: 17px; }
-  .hero-subtitle { font-size: 17px; }
-  .hero-grid { grid-template-columns: 1fr; gap: 30px; }
-  .hero-book img { max-width: 300px; }
+  .hero-section { padding: 18px 14px 32px; }
+  .hero-section h1 { font-size: 27px; }
+  .hero-question { font-size: 15px; }
+  .hero-subtitle { font-size: 15px; }
+  .hero-grid { display: flex; flex-direction: column; gap: 24px; }
+  .hero-offer { order: 1; }
+  .hero-book { order: 2; }
+  .hero-book img { max-width: 240px; }
   .urgency { font-size: 22px; }
   .book-offer-grid, .inside-wrap { grid-template-columns: 1fr; }
   .collage-column { display: none; }
