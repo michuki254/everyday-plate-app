@@ -130,14 +130,14 @@ export default function Home() {
             <h3>Take A Look Inside The Book...</h3>
             <div className="peek-grid">
               <Image
-                src="/images/sample-chapter.jpg"
-                alt="Chapter opener sample page"
+                src="/images/sample-capacity.jpg"
+                alt="Plan for capacity, not character — full, reduced, and minimum-care day cards"
                 width={340}
                 height={440}
               />
               <Image
-                src="/images/sample-recipe.jpg"
-                alt="Recipe sample page with swaps and shortcuts"
+                src="/images/sample-effort.jpg"
+                alt="The effort scale for beginner strength and exercise library"
                 width={340}
                 height={440}
               />
