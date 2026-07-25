@@ -1,5 +1,6 @@
 import Image from "next/image";
 import BuyButton from "../components/BuyButton";
+import ExitIntentOffer from "../components/ExitIntentOffer";
 
 const chapters = [
   `The "Monday-morning trap" — why the scale can jump overnight (and the five things it's actually measuring besides fat)... - pg. 13`,
@@ -28,6 +29,7 @@ const chapters = [
 export default function Home() {
   return (
     <main>
+      <ExitIntentOffer />
       <header className="topbar">
         <a href="#" aria-label="The Everyday Plate Blueprint home">
           <span className="brand-mark">EPB</span>
